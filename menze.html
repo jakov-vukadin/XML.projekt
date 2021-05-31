@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="menze.css">
+  <title>Studentske menze</title>
+</head>
+
+<body>
+  <header>
+    <div class="cont">
+      <h1>Studentske menze</h1>
+    </div>
+  </header>
+  <main>
+    <div class="cont">
+      <h2>Lokacije studentskih menzi:</h2>
+      <p><i>Klikni na jedan od markera i provjeri radno vrijeme menze!</i></p>
+      <div id="map"></div>
+      <br>
+      <h2>Trenutno otvorene studentske menze:</h2>
+      <p><i>Klikni na jedan od markera i provjeri posluzuje li menza <b>pohani sir</b>!</i></p>
+      <div id="map2"></div>
+    </div>
+</main>
+<footer>
+  <div class="cont">
+    <p>Jakov Vukadin</p>
+  </div>
+</footer>
+  
+  <script>
+    function loadMap() {
+      var time = new Date()
+      
+      const mapOptions = {
+        center: new google.maps.LatLng(45.8083404, 15.9696247),
+        zoom: 13
+      }
+      const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      fetch("menze.json")
+        .then(response => response.json())
+        .then(data => {
+          for (menze of data) {
+            let marker = new google.maps.Marker({
+              map: map,
+              position: new google.maps.LatLng(menze.location[0], menze.location[1]),
+              title: menze.name,
+              working_hours: "Radno vrijeme: " + menze.working_time[0]+"h - "+menze.working_time[1]+"h"
+            })
+              const infowindow = new google.maps.InfoWindow({
+                content: marker.working_hours
+              });
+              marker.addListener("click", () => {
+                infowindow.open(map2, marker);
+              });
+          }
+        })
+        
+      const map2 = new google.maps.Map(document.getElementById("map2"), mapOptions);
+
+      fetch("menze.json")
+        .then(response => response.json())
+        .then(data => {
+          for (menze of data) {
+            if(time.getUTCHours()+2 > menze.working_time[0] && time.getUTCHours()+2<menze.working_time[1] 
+            && menze.working_days.includes(time.getDay())){
+              let marker = new google.maps.Marker({
+                map: map2,
+                position: new google.maps.LatLng(menze.location[0], menze.location[1]),
+                title: menze.name,
+                pohani_sir: menze.pohani_sir + " pohani sir!"
+              })
+              marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
+              const infowindow = new google.maps.InfoWindow({
+                content: marker.pohani_sir
+              });
+              marker.addListener("click", () => {
+                infowindow.open(map2, marker);
+              });
+            }else{
+              let marker = new google.maps.Marker({
+                map: map2,
+                position: new google.maps.LatLng(menze.location[0], menze.location[1]),
+                title: menze.name,
+                pohani_sir: menze.pohani_sir + " pohani sir!"
+              })
+              const infowindow = new google.maps.InfoWindow({
+                content: marker.pohani_sir
+              });
+              marker.addListener("click", () => {
+                infowindow.open(map2, marker);
+              });
+            }
+          }
+        })
+    }
+  </script>
+  <script async 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnQQK97Oqv9dgs0nP4HRCJD-jXRSc4blg&callback=loadMap"
+    type="text/javascript"></script>
+
+</body>
+
+</html>

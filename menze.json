@@ -1,0 +1,107 @@
+[
+    {
+      "name":  "Restoran Savska",
+      "location": [45.80372, 15.9640112],
+      "working_time":[14,21],
+      "working_days":[1,2,4,5,6,0],
+      "pohani_sir": "Poslužuju"
+    },
+    {
+      "name": "SD Stjepan Radić",
+      "location": [45.7851524,15.938673],
+      "working_time":[7,21],
+      "working_days":[1,2,3,4,5,0],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Menza Restoran \"Cvjetno naselje\"",
+      "location": [45.7915771,15.9592223],
+      "working_time":[7,15],
+      "working_days":[2,3,5,6,0],
+      "pohani_sir": "Poslužuju"
+    },
+    {
+      "name": "Restoran \"Lašćina\"",
+      "location": [45.8210428,15.9972584],
+      "working_time":[8,16],
+      "working_days":[1,2,3,4,5],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+        "name": "Restoran \"Borongaj\"",
+        "location": [45.8120526,16.0295892],
+        "working_time":[8,15],
+        "working_days":[1,2,3,4,5],
+        "pohani_sir": "Poslužuju"
+    },
+    {
+      "name":  "Restoran \"Ekonomija\"",
+      "location": [45.8161782,16.0099449],
+      "working_time":[11,19],
+      "working_days":[1,2,3,4,5,6,0],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Restoran \"Medicina\"",
+      "location": [45.8196613,15.9822679],
+      "working_time":[8,20],
+      "working_days":[1,2,3,4,5],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Restoran \"Veterina\"",
+      "location": [45.8058513,16.0066709],
+      "working_time":[8,20],
+      "working_days":[1,2,4,5,6,0],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Menza \"Agronomija i Šumarstvo\"",
+      "location": [45.82796,16.0275245],
+      "working_time":[8,18],
+      "working_days":[1,2,3,4,5,6,0],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+        "name": "Restoran \"FSB\"",
+        "location": [45.7953409,15.9691516],
+        "working_time":[8,21],
+        "working_days":[1,2,3,4,5,6,0],
+        "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Restoran \"ALU\"",
+      "location": [45.8114794,15.9605401],
+      "working_time":[8,20],
+      "working_days":[1,2,3,4,5,6,0],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Restoran \"TTF\"",
+      "location": [45.812196,15.9347999],
+      "working_time":[8,20],
+      "working_days":[1,2,3,4,5,6,0],
+      "pohani_sir": "Ne poslužuju"
+    },
+    {
+      "name": "Menza \"TVZ\"",
+      "location": [45.8000769,15.9258574],
+      "working_time":[8,20],
+      "working_days":[1,2,3,4,5,6,0],
+      "pohani_sir": "Poslužuju"
+    },
+    {
+        "name": "Restoran \"Odeon\"",
+        "location": [45.8091588,15.9611437],
+        "working_time":[10,17],
+        "working_days":[1,2,3,4,5,6,0],
+        "pohani_sir": "Poslužuju"
+    },
+    {
+        "name": "Restoran \"Cassandra\"",
+        "location": [45.8001432,15.9693565],
+        "working_time":[12,20],
+        "working_days":[1,2,3,4,5],
+        "pohani_sir": "Poslužuju"
+    }
+  ]

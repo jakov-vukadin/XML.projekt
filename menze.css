@@ -1,0 +1,29 @@
+.cont{
+    width: 800px;
+    margin: 0 auto;
+}
+
+#map,#map2{
+    width: 100%;; 
+    height:600px;
+}
+
+h1{
+    color: red;
+}
+
+header{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+html, body {
+    font-family: monospace;
+    height: 100%;
+    margin: 0;
+    
+}
+

@@ -1,0 +1,16 @@
+Stranicu je potrebno hostati pomocu xamppa.
+
+Ako nemate xampp, moguće je još i pomoću python nardebe u cmdu, no pokrenite cmd iz direktorija u kojem se nalazi projekt, čisto radi 
+čisto iu jednostavnosti.
+
+NARDEBA: python -m http.server
+
+CMD ce vam napisati port na kojem je otvoren, obicno to  bude 8000. 
+Stranica bi se trebala ucitat odlaskom na localhost:port/menze.html  -> localhost:8000/menze.html
+
+
+Hoverom tj. zadrškom pokazivača na pojedini marker, dobit cete mail popup oblak koji ce navesti naziv označene menze.
+Klikom na markere prve mape, iskocit ce vam pop-up oblak koji navodi radno vrijeme menze.
+Klikom na markere druge mape, iskocit ce vam pop-up oblak koji navodi poslluzuje li menza pohani sir.
+
+Druga mapa trenutno otvorene menze označava zelenim markerom, a zatvorene crvenim.
