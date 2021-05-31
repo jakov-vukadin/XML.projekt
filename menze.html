@@ -63,35 +63,22 @@
         .then(response => response.json())
         .then(data => {
           for (menze of data) {
+            let marker = new google.maps.Marker({
+                map: map2,
+                position: new google.maps.LatLng(menze.location[0], menze.location[1]),
+                title: menze.name,
+                pohani_sir: menze.pohani_sir + " pohani sir!"})
+
             if(time.getUTCHours()+2 > menze.working_time[0] && time.getUTCHours()+2<menze.working_time[1] 
             && menze.working_days.includes(time.getDay())){
-              let marker = new google.maps.Marker({
-                map: map2,
-                position: new google.maps.LatLng(menze.location[0], menze.location[1]),
-                title: menze.name,
-                pohani_sir: menze.pohani_sir + " pohani sir!"
-              })
               marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
-              const infowindow = new google.maps.InfoWindow({
-                content: marker.pohani_sir
-              });
-              marker.addListener("click", () => {
-                infowindow.open(map2, marker);
-              });
-            }else{
-              let marker = new google.maps.Marker({
-                map: map2,
-                position: new google.maps.LatLng(menze.location[0], menze.location[1]),
-                title: menze.name,
-                pohani_sir: menze.pohani_sir + " pohani sir!"
-              })
-              const infowindow = new google.maps.InfoWindow({
-                content: marker.pohani_sir
-              });
-              marker.addListener("click", () => {
-                infowindow.open(map2, marker);
-              });
             }
+            const infowindow = new google.maps.InfoWindow({
+                content: marker.pohani_sir
+              });
+              marker.addListener("click", () => {
+                infowindow.open(map2, marker);
+              });
           }
         })
     }
