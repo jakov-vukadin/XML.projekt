@@ -1,16 +1,31 @@
 Stranicu je potrebno hostati pomocu xamppa.
+UPUTE ZA XAMPP:
+Nakon instalacije, datoteke projekta(menze.json, menze.html, menze.css) staviti u htdocs mapu koja
+se nalazi na lokalnom disku:(x)/xampp/. Nakon toga pokrenuti xampp i startati Apache server i potom
+kliknuti na "Admin" ili jednostavno navigirati kroz web browser do localhost/menze.html ukoliko
+se .html datoteka nalazi odmah u htdocs mapi. 
+
+Primjer: Ako je menze.html(projekt) u (C:)/xampp/htdocs/kolega direkotriju, url ce biti localhost/kolega/menza.html.
+
+----------------------------------------------------------------------------------------------------
+
+ALTERNATIVA XAMPPU ukoliko imate python instaliran:
 
 Ako nemate xampp, moguće je još i pomoću python nardebe u cmdu, no pokrenite cmd iz direktorija u kojem se nalazi projekt, čisto radi 
-čisto iu jednostavnosti.
+čisto iz jednostavnosti.
+
 
 NARDEBA: python -m http.server
 
-CMD ce vam napisati port na kojem je otvoren, obicno to  bude 8000. 
+CMD ce vam napisati port na kojem je otvoren, obicno to bude 8000. 
 Stranica bi se trebala ucitat odlaskom na localhost:port/menze.html  -> localhost:8000/menze.html
 
+----------------------------------------------------------------------------------------------------
 
-Hoverom tj. zadrškom pokazivača na pojedini marker, dobit cete mail popup oblak koji ce navesti naziv označene menze.
+INTERAKCIJA SA STRANICOM:
+
+Hoverom tj. zadrškom pokazivača na pojedinom markeru, dobit cete mali popup oblak koji ce navesti naziv označene menze.
 Klikom na markere prve mape, iskocit ce vam pop-up oblak koji navodi radno vrijeme menze.
 Klikom na markere druge mape, iskocit ce vam pop-up oblak koji navodi poslluzuje li menza pohani sir.
 
-Druga mapa trenutno otvorene menze označava zelenim markerom, a zatvorene crvenim.
+Druga mapa 'trenutno otvorene menze' označava zelenim markerom, a zatvorene crvenim.
