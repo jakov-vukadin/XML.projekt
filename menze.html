@@ -69,7 +69,7 @@
                 title: menze.name,
                 pohani_sir: menze.pohani_sir + " pohani sir!"})
 
-            if(time.getUTCHours()+2 > menze.working_time[0] && time.getUTCHours()+2<menze.working_time[1] 
+            if(time.getUTCHours()+2 >= menze.working_time[0] && time.getUTCHours()+2<menze.working_time[1] 
             && menze.working_days.includes(time.getDay())){
               marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png')
             }
